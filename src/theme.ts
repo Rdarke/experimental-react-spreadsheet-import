@@ -64,7 +64,7 @@ export const themeOverrides = {
   colors: {
     textColor: "#2D3748",
     subtitleColor: "#718096",
-    inactiveColor: "#A0AEC0",
+    inactiveColor: "#718096",
     border: "#E2E8F0",
     background: "white",
     backgroundAlpha: "rgba(255,255,255,0)",
