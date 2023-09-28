@@ -3,6 +3,7 @@ import { Box, Link, Code, Button, useDisclosure } from "@chakra-ui/react"
 import { mockRsiValues } from "./mockRsiValues"
 import { useState } from "react"
 import type { Result } from "src/types"
+import { cintraThemeOverrides } from "./cintraTheme"
 
 export default {
   title: "CINTRA - Styled React Spreadsheet Import",
@@ -23,16 +24,11 @@ export const Basic = () => {
         Download example file
       </Link>
       <ReactSpreadsheetImport 
-        {...mockRsiValues} 
-        isOpen={isOpen} 
-        onClose={onClose} 
+        {...mockRsiValues}
+        isOpen={isOpen}
+        onClose={onClose}
         onSubmit={setData}
-        customTheme={{
-          colors: {
-            background: 'black',
-            rsi: { 500: 'teal',}
-          }
-        }}
+        customTheme={cintraThemeOverrides}
          />
       {!!data && (
         <Box pt={64} display="flex" gap="8px" flexDirection="column">
